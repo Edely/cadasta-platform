@@ -46,9 +46,6 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="{% url 'account:dashboard' %}">{% trans "My dashboard" %}</a>
-                </li>
-                <li>
                   <a href="{% url 'account:profile' %}">{% trans "Edit profile" %}</a>
                 </li>
                 <li role="separator" class="divider"></li>
@@ -76,7 +73,13 @@
           </a>
           <nav class="nav" role="navigation">
             <ul class="list-inline visible-md-block visible-lg-block">
-              <li class="projects">
+              {% if user.is_authenticated %}
+              <li class="dashboard">
+                <a href="{% url 'account:dashboard' %}">
+                  {% trans "My Dashboard" %}
+                </a>
+              </li>{% endif %}<!--
+              --><li class="projects">
                 <a href="{% url 'project:list' %}">
                   {% trans "Projects" %}
                 </a>
@@ -85,9 +88,8 @@
                 <a href="{% url 'organization:list' %}">
                   {% trans "Organizations" %}
                 </a>
-              </li>
-              {% if is_superuser %}
-              <li class="users">
+              </li><!--
+              -->{% if is_superuser %}<li class="users">
                 <a href="{% url 'user:list' %}">
                   {% trans "Users" %}
                 </a>
@@ -100,6 +102,9 @@
                 <span class="glyphicon glyphicon-menu-hamburger"></span>
               </a>
               <ul class="dropdown-menu" aria-labelledby="dLabel">
+                {% if user.is_authenticated %}
+                <li class="dashboard"><a href="{% url 'account:dashboard' %}">{% trans "My Dashboard" %}</a></li>
+                {% endif %}
                 <li class="projects"><a href="{% url 'project:list' %}">{% trans "Projects" %}</a></li>
                 <li class="organizations"><a href="{% url 'organization:list' %}">{% trans "Organizations" %}</a></li>
                 {% if is_superuser %}<li class="users"><a href="{% url 'user:list' %}">{% trans "Users" %}</a></li>{% endif %}
