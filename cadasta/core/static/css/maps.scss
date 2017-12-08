@@ -38,6 +38,17 @@
   background: $body-bg !important;
 }
 
+.leaflet-marker-draggable {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url('/static/img/marker-icon-green.png') no-repeat;
+  width: 25px;
+  height: 41px;
+  padding-left: 25px;
+}
+
+
 /* =Geolocate
 -------------------------------------------------------------- */
 
