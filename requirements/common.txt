@@ -30,7 +30,7 @@ pytz==2017.3
 shapely==1.6.3
 gdal==1.10.0  # rq.filter: <1.11.0
 pylibmc==1.5.2
-awscli==1.14.10
+awscli==1.14.11
 pandas==0.21.1
 argon2-cffi==16.3.0
 requests==2.18.4
@@ -39,6 +39,6 @@ django-compressor==2.2
 beautifulsoup4==4.6.0
 gpxpy==1.1.2
 django-otp==0.4.2
-twilio==6.9.1
+twilio==6.10.0
 phonenumbers==8.8.8
 opbeat==3.6.0
