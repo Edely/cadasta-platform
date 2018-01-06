@@ -32,7 +32,7 @@ gdal==1.10.0  # rq.filter: <1.11.0
 pylibmc==1.5.2
 awscli==1.14.19
 pandas==0.22.0
-argon2-cffi==16.3.0
+argon2-cffi==18.1.0
 requests==2.18.4
 pyparsing==2.2.0
 django-compressor==2.2
