@@ -40,5 +40,5 @@ beautifulsoup4==4.6.0
 gpxpy==1.1.2
 django-otp==0.4.2
 twilio==6.10.0
-phonenumbers==8.8.8
+phonenumbers==8.8.9
 opbeat==3.6.0
