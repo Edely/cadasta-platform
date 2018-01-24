@@ -25,7 +25,7 @@ pyxform-cadasta==0.9.22
 python-magic==0.4.15
 Pillow==5.0.0
 django-jsonattrs==0.1.23
-openpyxl==2.4.10
+openpyxl==2.4.11
 pytz==2017.3
 shapely==1.6.3
 gdal==1.10.0  # rq.filter: <1.11.0
