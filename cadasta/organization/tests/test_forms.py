@@ -1003,7 +1003,7 @@ class ContactsFormTest(UserTestCase, TestCase):
             'class="close remove-contact" href="#">'
             '<span aria-hidden="true">&times;</span></a></td></tr>\n'
         )
-        self.assertHTMLEqual(expected, html)
+        assert expected == html
 
     def test_as_table_with_no_name_error(self):
         data = {
@@ -1029,7 +1029,7 @@ class ContactsFormTest(UserTestCase, TestCase):
             'class="close remove-contact" href="#">'
             '<span aria-hidden="true">&times;</span></a></td></tr>\n'
         )
-        self.assertHTMLEqual(expected, html)
+        assert expected == html
 
     def test_as_table_with_invalid_email_error(self):
         data = {
@@ -1055,7 +1055,7 @@ class ContactsFormTest(UserTestCase, TestCase):
             'class="close remove-contact" href="#">'
             '<span aria-hidden="true">&times;</span></a></td></tr>\n'
         )
-        self.assertHTMLEqual(expected, html)
+        assert expected == html
 
     def test_as_table_with_no_name_and_invalid_email_error(self):
         data = {
@@ -1082,7 +1082,7 @@ class ContactsFormTest(UserTestCase, TestCase):
             'class="close remove-contact" href="#">'
             '<span aria-hidden="true">&times;</span></a></td></tr>\n'
         )
-        self.assertHTMLEqual(expected, html)
+        assert expected == html
 
     def test_as_table_with_missing_email_or_phone_error(self):
         data = {
@@ -1108,7 +1108,7 @@ class ContactsFormTest(UserTestCase, TestCase):
             'class="close remove-contact" href="#">'
             '<span aria-hidden="true">&times;</span></a></td></tr>\n'
         )
-        self.assertHTMLEqual(expected, html)
+        assert expected == html
 
     def test_clean_string(self):
         form = forms.ContactsForm()

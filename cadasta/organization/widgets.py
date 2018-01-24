@@ -25,11 +25,11 @@ class ProjectRoleWidget(Select):
         self.user = user
         self.role = role
 
-    def render(self, name, value, *args, **kwargs):
+    def render(self, name, value, attrs=None):
         if value == 'A' or self.role == 'A':
             select = _("Administrator")
         else:
-            select = super().render(name, value, *args, **kwargs)
+            select = super().render(name, value, attrs=attrs)
 
         return self.html.format(
             full_name=self.user.full_name,
@@ -57,11 +57,11 @@ class ProjectRoleEditWidget(Select):
         self.project = project
         self.admin = admin
 
-    def render(self, *args, **kwargs):
+    def render(self, name, value, attrs=None):
         if self.admin:
             select = _("Administrator")
         else:
-            select = super().render(*args, **kwargs)
+            select = super().render(name, value, attrs=attrs)
 
         return self.html.format(
             project_name=self.project,
@@ -101,7 +101,7 @@ class PublicPrivateToggle(Widget):
             )
         }
 
-    def render(self, name, value, attrs=None, renderer=None):
+    def render(self, name, value, attrs=None):
         return self.html.format(
             label=_("Project visibility"),
             name=name,
@@ -153,7 +153,7 @@ class ContactsWidget(Widget):
     def value_omitted_from_data(self, data, files, name):
         return not any([k.startswith(name) for k in data.keys()])
 
-    def render(self, name, value, attrs=None, renderer=None):
+    def render(self, name, value, attrs=None):
         if not isinstance(value, self.attrs['formset']):
             value = self.attrs['formset'](prefix=name, initial=value)
 
