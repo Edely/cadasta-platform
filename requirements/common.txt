@@ -28,7 +28,7 @@ Pillow==5.0.0
 django-jsonattrs==0.1.23
 openpyxl==2.5.0
 pytz==2017.3
-shapely==1.6.4
+shapely==1.6.4.post1
 gdal==1.10.0  # rq.filter: <1.11.0
 pylibmc==1.5.2
 awscli==1.14.30
