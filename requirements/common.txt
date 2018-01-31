@@ -8,7 +8,7 @@ django-filter==1.1.0
 django-crispy-forms==1.7.0
 django-parsley==0.7
 django-formtools==2.1
-django-countries==5.1
+django-countries==5.1.1
 django-leaflet==0.18.1  # rq.filter: <=0.18.1
 django-sass-processor==0.5.7
 djangorestframework-gis==0.12
